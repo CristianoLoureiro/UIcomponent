@@ -45,9 +45,21 @@ jQuery(document).ready(function($) {
         }
     });
 
+    $(document).keyup(function(e) {
+        if (e.keyCode == 39) {
+            moveRight();
+        }
+    });
+
     $('a.control_next').click(function(e) {
         moveRight();
     });
+
+    $('#slider').ready(function(){
+        setInterval(function () {
+            moveRight();
+        }, 6000);
+      });
 
 
 });
